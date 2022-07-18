@@ -196,7 +196,7 @@ class Server:
                 ):
                     error_response = (
                         "IPC route returned values which are not able to be sent over sockets."
-                        " If you are trying to send a discord.py object,"
+                        " If you are trying to send a pycord object,"
                         " please only send the data you need."
                     )
                     log.error(error_response)

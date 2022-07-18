@@ -20,21 +20,12 @@ classifiers = [
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: Implementation :: CPython",
     "Topic :: Communications",
-    "Topic :: Documentation",
-    "Topic :: Documentation :: Sphinx",
     "Topic :: Internet",
     "Topic :: Software Development",
     "Topic :: Software Development :: Libraries",
     "Topic :: Software Development :: Libraries :: Python Modules",
 ]
 
-extras_require = {
-    "docs": [
-        "sphinx",
-        "sphinxcontrib_trio",
-        "sphinx-rtd-theme",
-    ],
-}
 
 with open("requirements.txt") as stream:
     install_requires = stream.read().splitlines()
@@ -42,12 +33,6 @@ with open("requirements.txt") as stream:
 packages = [
     "discord.ext.ipc",
 ]
-
-project_urls = {
-    "Documentation": "https://discord-ext-ipc.readthedocs.io",
-    "Issue Tracker": "https://github.com/Ext-Creators/discord-ext-ipc/issues",
-    "Source": "https://github.com/Ext-Creators/discord-ext-ipc",
-}
 
 _version_regex = r"^version = ('|\")((?:[0-9]+\.)*[0-9]+(?:\.?([a-z]+)(?:\.?[0-9])?)?)\1$"
 
@@ -76,14 +61,12 @@ if match.group(3) is not None:
 setuptools.setup(
     author="Ext-Creators",
     classifiers=classifiers,
-    description="A discord.py extension for inter-process communication.",
-    extras_require=extras_require,
+    description="A pycord extension for inter-process communication.",
     install_requires=install_requires,
     license="Apache Software License",
     name="discord-ext-ipc",
     packages=packages,
-    project_urls=project_urls,
     python_requires=">=3.5.3",
-    url="https://github.com/Ext-Creators/discord-ext-ipc",
+    url="https://github.com/fs86/discord-ext-ipc",
     version=version,
 )
